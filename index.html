@@ -4,355 +4,361 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Ciara ♡</title>
+<title>Ciara's Little World ♡</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Pacifico&display=swap');
+
+* {box-sizing:border-box;margin:0;padding:0}
 
 :root {
-  --pink: #ff70a6;
-  --light: #ffe0ed;
-  --dark: #c83f78;
-  --white: #fff9fc;
-  --purple: #d9a5ff;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  --pink:#ff6fa9;
+  --dark:#cf4384;
+  --light:#ffe0ed;
+  --pale:#fff6fa;
+  --purple:#d9a5ff;
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
-  background: linear-gradient(135deg,#ffe5f0,#fff5fa,#fce0ff);
-  color: #813d5c;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-button {
-  font-family: inherit;
-  cursor: pointer;
+  font-family:Quicksand,sans-serif;
+  color:#85415e;
+  background:linear-gradient(135deg,#ffe5f0,#fff7fb,#f5e2ff);
+  min-height:100vh;
+  overflow-x:hidden;
 }
 
 header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(255,245,250,.92);
-  backdrop-filter: blur(12px);
-  padding: 16px 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  border-bottom: 2px solid #ffc3dc;
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:#fff7f1ed;
+  backdrop-filter:blur(12px);
+  border-bottom:2px solid #ffc4dc;
+  padding:15px;
+  text-align:center;
 }
 
 .logo {
-  font-family: 'Pacifico', cursive;
-  color: #e65d98;
-  font-size: 26px;
+  font-family:Pacifico,cursive;
+  font-size:27px;
+  color:#e75e9c;
+  margin-bottom:12px;
 }
 
 nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:8px;
 }
 
-nav button {
-  border: none;
-  background: #ffe0ed;
-  color: #bd5480;
-  padding: 10px 14px;
-  border-radius: 20px;
-  font-weight: 700;
-  transition: .3s;
+button {
+  font-family:inherit;
+  cursor:pointer;
 }
 
-nav button:hover, nav button.active {
-  background: #f46fa7;
-  color: white;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px #f4a4c5;
+.nav-btn,.btn {
+  border:none;
+  border-radius:25px;
+  padding:12px 17px;
+  background:#ffe0ed;
+  color:#bd5480;
+  font-weight:700;
+  transition:all .25s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+.nav-btn:hover,.nav-btn.active {
+  background:var(--pink);
+  color:white;
+  transform:translateY(-3px);
+  box-shadow:0 6px 17px #e65d9880;
+}
+
+.btn {
+  background:linear-gradient(135deg,#ff78ae,#e64c91);
+  color:white;
+  margin:7px;
+  box-shadow:0 5px 14px #e65d9850;
+}
+
+.btn:hover {
+  transform:translateY(-5px) scale(1.04);
+  box-shadow:0 10px 24px #e65d9890;
+}
+
+.btn:active,.nav-btn:active {
+  transform:scale(.91);
+}
+
+.btn:disabled {
+  opacity:.5;
+  cursor:not-allowed;
+  transform:none;
 }
 
 .page {
-  display: none;
-  max-width: 1050px;
-  margin: auto;
-  padding: 45px 20px 80px;
-  animation: appear .5s ease;
+  display:none;
+  max-width:1050px;
+  margin:auto;
+  padding:40px 20px 75px;
+  animation:pageIn .45s ease;
 }
 
-.page.active {
-  display: block;
-}
+.page.active {display:block}
 
-@keyframes appear {
-  from {opacity:0; transform:translateY(15px)}
-  to {opacity:1; transform:translateY(0)}
+@keyframes pageIn {
+  from {opacity:0;transform:translateY(15px)}
+  to {opacity:1;transform:translateY(0)}
 }
 
 h1 {
-  font-family: 'Pacifico', cursive;
-  font-size: clamp(35px,7vw,65px);
-  color: #e65d98;
-  text-align: center;
-  margin-bottom: 15px;
+  text-align:center;
+  font-family:Pacifico,cursive;
+  color:#e65d98;
+  font-size:clamp(34px,7vw,58px);
+  margin-bottom:12px;
 }
 
-h2 {
-  color: #df6397;
-  margin-bottom: 15px;
-}
+h2 {color:#df6397;margin-bottom:12px}
 
-p {
-  line-height: 1.8;
-}
+p {line-height:1.8}
 
 .subtitle {
-  text-align: center;
-  font-size: 17px;
-  margin-bottom: 30px;
+  text-align:center;
+  margin-bottom:28px;
 }
 
-.hero {
-  text-align: center;
-  background: rgba(255,255,255,.7);
-  border: 2px solid #ffc5dd;
-  border-radius: 30px;
-  padding: 40px 22px;
-  box-shadow: 0 10px 35px #e99cba44;
+.hero,.card,.letter,.quiz-box,.song-box {
+  background:#ffffffd9;
+  border:2px solid #ffd0e2;
+  border-radius:25px;
+  padding:27px;
+  box-shadow:0 8px 25px #d77da52a;
 }
 
-.hero-heart {
-  font-size: 70px;
-  animation: heartbeat 1.5s infinite;
+.hero {text-align:center;padding:45px 25px}
+
+.heart {
+  font-size:65px;
+  animation:pulse 1.5s infinite;
 }
 
-@keyframes heartbeat {
-  0%,100% {transform:scale(1)}
-  50% {transform:scale(1.15)}
+@keyframes pulse {
+  50% {transform:scale(1.2)}
 }
 
-.main-button {
-  border: none;
-  background: linear-gradient(135deg,#ff75ac,#e94d91);
-  color: white;
-  padding: 14px 25px;
-  border-radius: 25px;
-  font-weight: 700;
-  font-size: 15px;
-  margin: 12px 5px;
-  box-shadow: 0 5px 15px #e65d9866;
-  transition: .3s;
-}
-
-.main-button:hover {
-  transform: translateY(-5px) scale(1.04);
-  box-shadow: 0 10px 25px #e65d9899;
-}
-
-.main-button:active {
-  transform: scale(.94);
-}
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-  gap: 18px;
-  margin-top: 25px;
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:18px;
+  margin-top:25px;
 }
 
 .card {
-  background: rgba(255,255,255,.85);
-  border: 2px solid #ffd0e2;
-  border-radius: 22px;
-  padding: 23px;
-  box-shadow: 0 6px 18px #e99cba33;
-  transition: .3s;
+  transition:.3s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px #e99cba66;
+  transform:translateY(-6px) rotate(-1deg);
+  box-shadow:0 12px 25px #d77da555;
 }
 
-.card .emoji {
-  font-size: 35px;
-  margin-bottom: 10px;
-}
+.emoji {font-size:37px;margin-bottom:12px}
 
 .letter {
-  background: #fffafd;
-  padding: 30px;
-  border-radius: 8px 25px 25px 8px;
-  border-left: 7px solid #f58bb5;
-  box-shadow: 0 7px 20px #c85b8733;
-  margin: 20px 0;
-  line-height: 1.9;
+  margin-bottom:22px;
+  border-left:7px solid #f58bb5;
+  border-radius:8px 22px 22px 8px;
+  line-height:1.9;
 }
 
-.letter h2 {
-  font-family: 'Pacifico', cursive;
-}
-
-.notes-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(190px,1fr));
-  gap: 13px;
+.notes {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:14px;
 }
 
 .note {
-  background: #fffafd;
-  border: 2px solid #ffd0e2;
-  border-radius: 17px;
-  padding: 18px;
-  min-height: 125px;
-  transition: .3s;
-  cursor: pointer;
+  background:#fffafd;
+  border:2px solid #ffc9df;
+  border-radius:18px;
+  padding:19px;
+  min-height:120px;
+  cursor:pointer;
+  transition:.3s;
 }
 
 .note:hover {
-  transform: rotate(-2deg) scale(1.03);
-  background: #ffe6f1;
+  background:#ffe2ef;
+  transform:rotate(-2deg) scale(1.04);
+}
+
+.note.open {
+  background:#ffe2ef;
+  border-color:#ed82ae;
 }
 
 .note small {
-  display: block;
-  color: #e878a4;
-  font-weight: 700;
-  margin-bottom: 9px;
+  display:block;
+  color:#df6397;
+  font-weight:bold;
+  margin-bottom:10px;
 }
 
-.song-box {
-  text-align: center;
-  background: linear-gradient(135deg,#ffc5df,#f8d9ff);
-  border-radius: 30px;
-  padding: 30px 20px;
+.song-box,.quiz-box {
+  text-align:center;
+  padding:30px;
 }
 
-.song-art {
-  width: 190px;
-  height: 190px;
-  margin: 15px auto;
-  border-radius: 25px;
-  background: linear-gradient(135deg,#f45e9b,#b98af0);
-  display: grid;
-  place-items: center;
-  font-size: 75px;
-  box-shadow: 0 10px 25px #a65b8c66;
+.album {
+  width:190px;
+  height:190px;
+  border-radius:25px;
+  background:linear-gradient(135deg,#ff79ae,#c78bea);
+  margin:20px auto;
+  display:grid;
+  place-items:center;
+  font-size:75px;
+  box-shadow:0 10px 30px #bd79b677;
 }
 
 iframe {
-  width: 100%;
-  max-width: 560px;
-  height: 315px;
-  border: none;
-  border-radius: 18px;
-  margin-top: 20px;
+  width:100%;
+  max-width:560px;
+  height:315px;
+  border:0;
+  border-radius:18px;
+  margin-top:20px;
 }
 
 .pasta {
-  font-size: 85px;
-  text-align: center;
-  margin: 20px;
-}
-
-.pasta-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.pasta-item {
-  background: white;
-  padding: 25px;
-  border-radius: 20px;
-  text-align: center;
-  border: 2px solid #ffd0e2;
+  font-size:85px;
+  text-align:center;
+  margin:20px;
 }
 
 .flag {
-  font-size: 85px;
-  text-align: center;
-  margin: 25px;
+  font-size:90px;
+  text-align:center;
+  margin:25px;
 }
 
 .secret {
-  background: linear-gradient(135deg,#ffbad7,#e6c0ff);
-  padding: 35px;
-  text-align: center;
-  border-radius: 25px;
-  margin-top: 25px;
+  background:linear-gradient(135deg,#ffc5df,#e9caff);
+  border-radius:25px;
+  padding:30px;
+  text-align:center;
+  margin-top:25px;
 }
 
-footer {
-  text-align: center;
-  padding: 25px;
-  color: #c96c94;
-  background: #fff3f9;
-  border-top: 2px solid #ffd0e2;
+.quiz-question {
+  font-size:22px;
+  font-weight:bold;
+  margin:20px 0;
 }
 
-.floating-heart {
-  position: fixed;
-  bottom: -30px;
-  pointer-events: none;
-  z-index: 200;
-  animation: floatUp 5s linear forwards;
+.answers {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  max-width:550px;
+  margin:20px auto;
 }
 
-@keyframes floatUp {
-  to {
-    transform: translateY(-110vh) rotate(360deg);
-    opacity: 0;
-  }
+.answer {
+  border:2px solid #ffc2dc;
+  border-radius:18px;
+  padding:15px 8px;
+  background:#fff7fb;
+  color:#b84f80;
+  font-weight:bold;
+  transition:.25s;
+}
+
+.answer:hover {
+  background:#ffcae0;
+  transform:scale(1.04);
+}
+
+.answer.correct {
+  background:#c6f3d7;
+  border-color:#64c98b;
+  color:#236d43;
+}
+
+.answer.wrong {
+  background:#ffd0d9;
+  border-color:#ed8298;
+  color:#9c3450;
+}
+
+.progress {
+  background:#f5c9dc;
+  height:12px;
+  border-radius:20px;
+  overflow:hidden;
+  margin:20px auto;
+  max-width:500px;
+}
+
+.progress-fill {
+  background:linear-gradient(90deg,#ff6fa9,#be81ed);
+  height:100%;
+  width:0;
+  transition:.4s;
+}
+
+#feedback {
+  min-height:40px;
+  font-weight:bold;
+  margin:15px;
 }
 
 #toast {
-  position: fixed;
-  bottom: 25px;
-  left: 50%;
-  transform: translateX(-50%) translateY(100px);
-  background: #e65d98;
-  color: white;
-  padding: 14px 23px;
-  border-radius: 25px;
-  z-index: 500;
-  transition: .4s;
-  box-shadow: 0 5px 20px #e65d9866;
-  text-align: center;
-  width: max-content;
-  max-width: 90%;
+  position:fixed;
+  bottom:25px;
+  left:50%;
+  transform:translate(-50%,100px);
+  background:#d94e91;
+  color:white;
+  padding:13px 23px;
+  border-radius:30px;
+  z-index:500;
+  transition:.4s;
+  text-align:center;
+  width:max-content;
+  max-width:90%;
 }
 
-#toast.show {
-  transform: translateX(-50%) translateY(0);
+#toast.show {transform:translate(-50%,0)}
+
+.float {
+  position:fixed;
+  bottom:-40px;
+  z-index:300;
+  pointer-events:none;
+  animation:floatUp 4s linear forwards;
+}
+
+@keyframes floatUp {
+  to {transform:translateY(-110vh) rotate(360deg);opacity:0}
+}
+
+footer {
+  text-align:center;
+  padding:25px;
+  background:#fff4fa;
+  border-top:2px solid #ffd0e2;
 }
 
 @media(max-width:600px) {
-  header {
-    justify-content: center;
-  }
-  nav {
-    justify-content: center;
-  }
-  nav button {
-    padding: 9px 11px;
-    font-size: 12px;
-  }
-  .page {
-    padding-top: 30px;
-  }
-  iframe {
-    height: 230px;
-  }
+  nav {gap:5px}
+  .nav-btn {padding:9px 11px;font-size:12px}
+  .page {padding:30px 14px}
+  iframe {height:230px}
+  .answers {grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -360,15 +366,16 @@ footer {
 <body>
 
 <header>
-  <div class="logo">For Ciara ♡</div>
+  <div class="logo">Ciara's Little World ♡</div>
   <nav>
-    <button class="active" onclick="showPage('home',this)">Home</button>
-    <button onclick="showPage('letters',this)">Letters 💌</button>
-    <button onclick="showPage('notes',this)">Notes 💗</button>
-    <button onclick="showPage('music',this)">Music 🎵</button>
-    <button onclick="showPage('pasta',this)">Pasta 🍝</button>
-    <button onclick="showPage('britain',this)">Britain 🇬🇧</button>
-    <button onclick="showPage('surprise',this)">Surprise ✨</button>
+    <button class="nav-btn active" onclick="go('home',this)">🏠 Home</button>
+    <button class="nav-btn" onclick="go('letters',this)">💌 Letters</button>
+    <button class="nav-btn" onclick="go('notes',this)">💗 Notes</button>
+    <button class="nav-btn" onclick="go('music',this)">🎵 Music</button>
+    <button class="nav-btn" onclick="go('game',this)">🎮 Quiz</button>
+    <button class="nav-btn" onclick="go('pasta',this)">🍝 Pasta</button>
+    <button class="nav-btn" onclick="go('britain',this)">🇬🇧 Britain</button>
+    <button class="nav-btn" onclick="go('surprise',this)">🎁 Surprise</button>
   </nav>
 </header>
 
@@ -376,46 +383,46 @@ footer {
 
 <section class="page active" id="home">
   <div class="hero">
-    <div class="hero-heart">💗</div>
+    <div class="heart">💗</div>
     <h1>Hey Ciara!</h1>
-    <p class="subtitle">I made a little something just for you ♡</p>
+    <p class="subtitle">Welcome to your own little corner of the internet ♡</p>
 
     <p>
-      Soooo, I decided to make you your own little website.
-      Nothing too crazy, just a bunch of little things,
-      letters, notes, music, and some random stuff that
-      hopefully makes you smile.
+      I made this little website just for you.
+      It's filled with random things, letters, notes,
+      music, games and obviously pasta.
     </p>
 
     <p style="margin-top:15px">
-      I hope you like it because I actually put effort into this
-      instead of doing something productive.
+      I hope you like it. I definitely didn't spend
+      ages making all these buttons work. 😂
     </p>
 
-    <button class="main-button" onclick="showPage('letters')">
-      Open your letters 💌
-    </button>
-
-    <button class="main-button" onclick="showPage('notes')">
-      Read your notes 💗
-    </button>
+    <button class="btn" onclick="go('letters')">Read my letters 💌</button>
+    <button class="btn" onclick="go('game')">Play your quiz 🎮</button>
+    <button class="btn" onclick="go('notes')">Open your notes 💗</button>
   </div>
 
-  <div class="card-grid">
+  <div class="grid">
     <div class="card">
       <div class="emoji">💌</div>
-      <h2>Little letters</h2>
-      <p>Some things I wanted to tell you.</p>
+      <h2>Letters</h2>
+      <p>Some little things I wanted to tell you.</p>
+      <button class="btn" onclick="go('letters')">Open letters</button>
     </div>
+
+    <div class="card">
+      <div class="emoji">🎮</div>
+      <h2>Your quiz</h2>
+      <p>Let's see how well you know this website!</p>
+      <button class="btn" onclick="go('game')">Play now</button>
+    </div>
+
     <div class="card">
       <div class="emoji">🎵</div>
       <h2>Your song</h2>
-      <p>A little music break just for you.</p>
-    </div>
-    <div class="card">
-      <div class="emoji">🍝</div>
-      <h2>Pasta supremacy</h2>
-      <p>Because pasta deserves its own page.</p>
+      <p>A song picked for this little website.</p>
+      <button class="btn" onclick="go('music')">Listen</button>
     </div>
   </div>
 </section>
@@ -423,104 +430,134 @@ footer {
 <!-- LETTERS -->
 
 <section class="page" id="letters">
-  <h1>Letters for you 💌</h1>
+  <h1>Letters for Ciara 💌</h1>
   <p class="subtitle">A few things I wanted you to know.</p>
 
   <div class="letter">
-    <h2>Letter 1: Just because ♡</h2>
-    <p>
-      Hey Ciara,
-      <br><br>
-      I don't really know how to start this without sounding
-      cheesy, but I just wanted to say that you're genuinely
-      a really lovely person. I like talking to you, hearing
-      about your day, and just having random conversations
-      with you.
-      <br><br>
-      You have this way of making an ordinary day a little
-      more interesting, and I think that's pretty special.
-      I hope you never forget how appreciated you are.
-      <br><br>
-      Anyway, that's enough being sentimental for today.
-      Have a good day, you deserve it. ♡
-    </p>
-    <p style="text-align:right;margin-top:15px">— Someone who thinks you're pretty cool</p>
+    <h2>♡ Letter One: Just because</h2>
+    Hey Ciara,
+
+    I don't really know how to start this without sounding
+    cheesy, but I just wanted to say that you're genuinely
+    a lovely person. I like talking to you, hearing about
+    your day, and having random conversations with you.
+
+    You have a way of making an ordinary day a little
+    more interesting, and I think that's pretty special.
+
+    I hope you never forget how appreciated you are.
+
+    <br><br>— Someone who thinks you're pretty cool ♡
   </div>
 
   <div class="letter">
-    <h2>Letter 2: A little reminder</h2>
-    <p>
-      Ciara,
-      <br><br>
-      Just a reminder that you don't have to be having
-      the best day ever to deserve kindness. You deserve
-      good things on the boring days, the stressful days,
-      and all the random days in between.
-      <br><br>
-      I hope you smile today, laugh at something stupid,
-      eat something good, and remember that someone
-      out there thinks you're a pretty amazing person.
-      <br><br>
-      Also, don't forget to drink water. Very important
-      information.
-      ♡
-    </p>
+    <h2>♡ Letter Two: A little reminder</h2>
+    Ciara,
+
+    Just a reminder that you don't have to be having the
+    best day ever to deserve kindness. You deserve good
+    things on boring days, stressful days, and all the
+    random days in between.
+
+    I hope you smile today, laugh at something stupid,
+    eat something good, and remember that you're appreciated.
+
+    Also, don't forget to drink water. Very important.
+    😂
   </div>
 
   <div class="letter">
-    <h2>Letter 3: The honest one</h2>
-    <p>
-      Heyyy,
-      <br><br>
-      I wanted to make something that wasn't just another
-      ordinary message. Something you could come back to
-      whenever you wanted.
-      <br><br>
-      I think you're really fun to talk to, and I appreciate
-      getting to know you. I don't want to make things
-      awkward or overcomplicate anything. I just wanted
-      you to know that you're someone worth appreciating.
-      <br><br>
-      So yeah. This entire website is basically me saying
-      you're awesome without having to type it 500 times.
-      <br><br>
-      Hope you like it, Ciara. 💗
-    </p>
+    <h2>♡ Letter Three: The honest one</h2>
+    Heyyy,
+
+    I wanted to make something that wasn't just another
+    ordinary message. Something you could come back to
+    whenever you wanted.
+
+    I think you're really fun to talk to, and I appreciate
+    getting to know you. I don't want to make things awkward
+    or overcomplicate anything.
+
+    I just wanted you to know that you're someone worth
+    appreciating.
+
+    Hope you like it, Ciara. 💗
   </div>
+
+  <button class="btn" onclick="go('notes')">More little messages →</button>
 </section>
 
 <!-- NOTES -->
 
 <section class="page" id="notes">
   <h1>25 little notes 💗</h1>
-  <p class="subtitle">Click any note for a little message!</p>
-
-  <div class="notes-grid" id="notesGrid"></div>
+  <p class="subtitle">Tap each card to reveal its message!</p>
+  <div class="notes" id="notesGrid"></div>
 </section>
 
 <!-- MUSIC -->
 
 <section class="page" id="music">
-  <h1>A song for you 🎵</h1>
-  <p class="subtitle">Every little website needs a soundtrack.</p>
+  <h1>Your little soundtrack 🎵</h1>
+  <p class="subtitle">A song for you, Ciara.</p>
 
   <div class="song-box">
-    <div class="song-art">🎧💗</div>
-    <h2>Ciara's little song</h2>
-    <p>Picked especially for this website.</p>
+    <div class="album">🎧💗</div>
+    <h2>Ciara's song</h2>
+    <p>Just press play and enjoy!</p>
 
-    <button class="main-button" onclick="playSong()">
-      ▶ Play song
-    </button>
-
-    <button class="main-button" onclick="openSong()">
-      Open on YouTube ↗
-    </button>
+    <button class="btn" onclick="playSong()">▶ Play song</button>
+    <button class="btn" onclick="stopSong()">⏸ Stop song</button>
+    <button class="btn" onclick="openSong()">Open YouTube ↗</button>
 
     <div id="player"></div>
-    <p style="margin-top:15px;font-size:13px">
-      If the embedded player doesn't work, use the YouTube button!
-    </p>
+  </div>
+</section>
+
+<!-- QUIZ GAME -->
+
+<section class="page" id="game">
+  <h1>The Ciara Quiz 🎮</h1>
+  <p class="subtitle">A very important test. Good luck! 💗</p>
+
+  <div class="quiz-box">
+
+    <div id="quizStart">
+      <div class="heart">🎀</div>
+      <h2>How well do you know this website?</h2>
+      <p>
+        There are 8 questions. Some are easy,
+        some are VERY important.
+      </p>
+      <p style="margin-top:12px">Can you get a perfect score?</p>
+      <button class="btn" onclick="startQuiz()">START QUIZ 💗</button>
+    </div>
+
+    <div id="quizPlay" style="display:none">
+      <p id="questionNumber">Question 1 / 8</p>
+
+      <div class="progress">
+        <div class="progress-fill" id="progress"></div>
+      </div>
+
+      <div class="quiz-question" id="question"></div>
+      <div class="answers" id="answers"></div>
+      <div id="feedback"></div>
+
+      <button class="btn" id="nextButton" onclick="nextQuestion()" style="display:none">
+        Next question →
+      </button>
+    </div>
+
+    <div id="quizEnd" style="display:none">
+      <div class="heart">🏆</div>
+      <h2 id="resultTitle">You finished!</h2>
+      <p id="resultScore" style="font-size:28px;margin:15px"></p>
+      <p id="resultMessage"></p>
+      <button class="btn" onclick="startQuiz()">PLAY AGAIN 🔄</button>
+      <button class="btn" onclick="go('surprise')">Claim surprise 🎁</button>
+    </div>
+
   </div>
 </section>
 
@@ -530,179 +567,183 @@ footer {
   <h1>The pasta department 🍝</h1>
   <div class="pasta">🍝</div>
 
-  <p class="subtitle">
-    An extremely important and scientifically necessary page.
-  </p>
-
   <div class="card">
-    <h2>Important announcement:</h2>
+    <h2>Official announcement</h2>
     <p>
-      Pasta is amazing. There is no debate.
-      It can be eaten at basically any time of the day.
-      It comes in different shapes, sizes, and flavours.
-      It's basically perfect.
-    </p>
-    <p style="margin-top:12px">
-      If someone says pasta is bad, I recommend questioning
-      their decision-making skills.
+      Pasta is one of the greatest inventions known to humanity.
+      This is not an opinion. This is a lifestyle.
     </p>
   </div>
 
-  <div class="pasta-list">
-    <div class="pasta-item">
+  <div class="grid">
+    <div class="card">
       <div class="emoji">🍝</div>
       <h2>Spaghetti</h2>
       <p>A classic. Never disappoints.</p>
     </div>
-    <div class="pasta-item">
+    <div class="card">
       <div class="emoji">🧀</div>
       <h2>Mac & Cheese</h2>
       <p>Cheese makes everything better.</p>
     </div>
-    <div class="pasta-item">
+    <div class="card">
       <div class="emoji">🍅</div>
       <h2>Penne</h2>
-      <p>Underrated pasta shape.</p>
+      <p>Very underrated.</p>
     </div>
-    <div class="pasta-item">
-      <div class="emoji">🍜</div>
+    <div class="card">
+      <div class="emoji">🥘</div>
       <h2>Lasagna</h2>
-      <p>Layers of pure happiness.</p>
+      <p>Layers of happiness.</p>
     </div>
   </div>
 
   <div class="secret">
-    <h2>Very important question</h2>
-    <p>Would you rather have unlimited pasta or unlimited desserts?</p>
-    <button class="main-button" onclick="toast('CORRECT ANSWER. PASTA FOREVER 🍝')">
-      Unlimited pasta 🍝
-    </button>
-    <button class="main-button" onclick="toast('Interesting choice... I respect it 😂')">
-      Unlimited desserts 🍰
-    </button>
+    <h2>THE IMPORTANT QUESTION</h2>
+    <p>Unlimited pasta or unlimited desserts?</p>
+    <button class="btn" onclick="toast('THE CORRECT ANSWER 🍝💗')">Unlimited pasta</button>
+    <button class="btn" onclick="toast('Hmm. Interesting choice 😂')">Unlimited desserts</button>
   </div>
 </section>
 
 <!-- BRITAIN -->
 
 <section class="page" id="britain">
-  <h1>A little bit of Britain 🇬🇧</h1>
+  <h1>The British department 🇬🇧</h1>
   <div class="flag">🇬🇧</div>
 
   <div class="card">
-    <h2>Welcome to the British department</h2>
+    <h2>Welcome to Britain</h2>
     <p>
-      This page exists because I thought it would be funny
-      to randomly put an entire British section into your website.
+      I have absolutely no explanation for why this page
+      exists. It just needed to be here.
     </p>
   </div>
 
-  <div class="card-grid">
-    <div class="card">
-      <div class="emoji">☕</div>
-      <h2>Tea time</h2>
-      <p>Very important British business.</p>
-    </div>
-    <div class="card">
-      <div class="emoji">🫖</div>
-      <h2>Fancy a cuppa?</h2>
-      <p>Would you like some tea?</p>
-    </div>
-    <div class="card">
-      <div class="emoji">🏰</div>
-      <h2>Royal vibes</h2>
-      <p>Extremely fancy. Very official.</p>
-    </div>
+  <div class="grid">
+    <div class="card"><div class="emoji">☕</div><h2>Tea time</h2><p>Very important business.</p></div>
+    <div class="card"><div class="emoji">🫖</div><h2>Fancy a cuppa?</h2><p>Would you like some tea?</p></div>
+    <div class="card"><div class="emoji">🏰</div><h2>Royal vibes</h2><p>Extremely fancy.</p></div>
   </div>
 
   <div class="secret">
     <h2>British translator</h2>
-    <p id="britishText">Press the button to learn something.</p>
-    <button class="main-button" onclick="british()">Translate 🇬🇧</button>
+    <p id="britishText">Press the button to translate!</p>
+    <button class="btn" onclick="british()">Translate 🇬🇧</button>
   </div>
 </section>
 
 <!-- SURPRISE -->
 
 <section class="page" id="surprise">
-  <h1>A little surprise ✨</h1>
+  <h1>A little surprise 🎁</h1>
 
   <div class="secret">
-    <div class="hero-heart">💗</div>
-    <h2>You've found the secret page!</h2>
-    <p>
-      Okay Ciara, I don't really have some massive secret
-      to reveal. I just wanted to make another little page
-      for you because why not?
-    </p>
+    <div class="heart">💗</div>
+    <h2>You found the secret page!</h2>
+    <p>Press the button. I promise it's worth it.</p>
 
-    <button class="main-button" onclick="revealSecret()">
-      Open your surprise 🎁
-    </button>
+    <button class="btn" onclick="revealSecret()">OPEN SURPRISE ✨</button>
 
-    <div id="secretMessage" style="margin-top:20px;font-size:19px;font-weight:700"></div>
+    <div id="secretMessage" style="margin-top:20px;font-size:19px;font-weight:bold"></div>
   </div>
 
-  <div class="card" style="margin-top:25px;text-align:center">
-    <h2>One last thing...</h2>
-    <p>
-      Thanks for being you, Ciara.
-      I hope this website gives you a reason to smile.
-      You deserve all the good things. ♡
-    </p>
-    <button class="main-button" onclick="hearts()">
-      Make it rain hearts 💕
-    </button>
+  <div class="card" style="margin-top:20px;text-align:center">
+    <h2>Make it rain hearts!</h2>
+    <p>Because why not?</p>
+    <button class="btn" onclick="hearts()">💕 RELEASE THE HEARTS</button>
+  </div>
+
+  <div class="card" style="margin-top:20px;text-align:center">
+    <h2>Random compliment machine</h2>
+    <p id="compliment">Click to receive a compliment.</p>
+    <button class="btn" onclick="compliment()">Give me one 💗</button>
   </div>
 </section>
 
 <footer>
-  Made with pink pixels, pasta, and a little bit of effort. ♡
-  <br>
-  Especially for Ciara.
+  Made with pink pixels, pasta and a little effort. ♡
+  <br>Especially for Ciara.
 </footer>
 
 <div id="toast"></div>
 
 <script>
 
-// PAGE NAVIGATION
+// NAVIGATION
 
-function showPage(page,button) {
-  document.querySelectorAll('.page').forEach(p => {
-    p.classList.remove('active');
-  });
+function go(id,button) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
 
-  document.getElementById(page).classList.add('active');
+  const target = document.getElementById(id);
+  if(!target) return;
 
-  document.querySelectorAll('nav button').forEach(b => {
-    b.classList.remove('active');
-  });
+  target.classList.add('active');
 
-  if(button) button.classList.add('active');
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+
+  if(button) {
+    button.classList.add('active');
+  } else {
+    document.querySelectorAll('.nav-btn').forEach(b => {
+      if(b.getAttribute('onclick')?.includes("'" + id + "'")) {
+        b.classList.add('active');
+      }
+    });
+  }
 
   window.scrollTo({top:0,behavior:'smooth'});
+  sparkle();
 }
 
-// 25 NOTES
+// CLICK EFFECT
+
+document.addEventListener('click',e => {
+  const b = e.target.closest('button');
+  if(!b) return;
+
+  const rect = b.getBoundingClientRect();
+  const heart = document.createElement('span');
+
+  heart.textContent = '♡';
+  heart.style.position = 'fixed';
+  heart.style.left = (rect.left+rect.width/2)+'px';
+  heart.style.top = rect.top+'px';
+  heart.style.color = '#ff4e9a';
+  heart.style.fontSize = '24px';
+  heart.style.pointerEvents = 'none';
+  heart.style.zIndex = '999';
+  heart.style.transition = 'all .7s ease';
+
+  document.body.appendChild(heart);
+
+  requestAnimationFrame(() => {
+    heart.style.transform = 'translateY(-55px) scale(1.7)';
+    heart.style.opacity = '0';
+  });
+
+  setTimeout(() => heart.remove(),750);
+});
+
+// NOTES
 
 const notes = [
-"You're genuinely a lovely person. Never forget that. 💗",
+"You're genuinely a lovely person. 💗",
 "I hope something makes you smile today.",
-"You're cooler than you probably give yourself credit for.",
+"You're cooler than you give yourself credit for.",
 "Just a reminder that you're appreciated.",
 "Your laugh deserves its own soundtrack.",
 "Hope your day is as lovely as you are.",
 "Never stop being your wonderfully random self.",
 "You make conversations more interesting.",
-"You deserve happiness, even on the difficult days.",
+"You deserve happiness, even on difficult days.",
 "Remember to take care of yourself.",
 "You're one of the good things about an ordinary day.",
-"Never underestimate how much a little kindness matters.",
+"Never underestimate how much kindness matters.",
 "I hope you achieve everything you're working towards.",
 "You're allowed to have bad days. Be kind to yourself.",
 "Someone thinks you're pretty amazing. Hint: me.",
-"Go eat something good. This is an official instruction.",
+"Go eat something good. Official instruction.",
 "Keep smiling, it suits you.",
 "You're worth more than you sometimes realise.",
 "I hope you have a thousand reasons to smile.",
@@ -710,7 +751,7 @@ const notes = [
 "Don't let anyone make you feel less than you are.",
 "May your problems be small and your pasta portions huge.",
 "You deserve good music and even better memories.",
-"Stay exactly as wonderfully unique as you are.",
+"Stay wonderfully unique.",
 "Thank you for being you, Ciara. ♡"
 ];
 
@@ -719,23 +760,23 @@ const notesGrid = document.getElementById('notesGrid');
 notes.forEach((note,i) => {
   const card = document.createElement('div');
   card.className = 'note';
-  card.innerHTML = `
-    <small>NOTE #${i+1} 💌</small>
-    <span>Tap to open ♡</span>
-  `;
+  card.innerHTML = `<small>NOTE #${i+1} 💌</small><span>Tap to reveal ♡</span>`;
 
-  card.onclick = () => {
-    card.innerHTML = `
-      <small>NOTE #${i+1} 💗</small>
-      <p>${note}</p>
-    `;
-    card.style.background = '#ffe4ef';
-  };
+  card.addEventListener('click',() => {
+    if(card.classList.contains('open')) {
+      card.innerHTML = `<small>NOTE #${i+1} 💌</small><span>Tap to reveal ♡</span>`;
+      card.classList.remove('open');
+    } else {
+      card.innerHTML = `<small>NOTE #${i+1} 💗</small><p>${note}</p>`;
+      card.classList.add('open');
+      toast('A little message for you 💗');
+    }
+  });
 
   notesGrid.appendChild(card);
 });
 
-// MUSIC PLAYER
+// MUSIC
 
 const songURL = 'https://www.youtube.com/watch?v=MEIRNj0EmH0';
 const videoID = 'MEIRNj0EmH0';
@@ -744,25 +785,199 @@ function playSong() {
   document.getElementById('player').innerHTML = `
     <iframe
       src="https://www.youtube.com/embed/${videoID}?autoplay=1"
-      title="Song for Ciara"
+      title="Ciara's song"
       allow="autoplay; encrypted-media; picture-in-picture"
       allowfullscreen>
-    </iframe>
-  `;
-  toast('Your song is loading! 🎵');
+    </iframe>`;
+
+  toast('Your song is playing! 🎵');
+}
+
+function stopSong() {
+  document.getElementById('player').innerHTML = '';
+  toast('Music stopped ♡');
 }
 
 function openSong() {
   window.open(songURL,'_blank','noopener');
 }
 
-// SECRET SURPRISE
+// QUIZ
 
-function revealSecret() {
-  document.getElementById('secretMessage').innerHTML =
-    'SURPRISE!! 💗<br><br>' +
-    'You're pretty special, Ciara. I hope you never forget that. ' +
-    'And yes, I really did make an entire website for you. 😂💕';
+const questions = [
+  {
+    q:"Who was this website made for?",
+    a:["Ciara","Emma","Sarah","Nobody"],
+    correct:0,
+    right:"Obviously YOU! 💗",
+    wrong:"HOW DID YOU GET THAT WRONG 😭"
+  },
+  {
+    q:"What is the main colour theme?",
+    a:["Blue","Green","Pink","Black"],
+    correct:2,
+    right:"PINK SUPREMACY! 🎀",
+    wrong:"LOOK AT THE WHOLE WEBSITE 😂"
+  },
+  {
+    q:"Which food has its own special page?",
+    a:["Pizza","Pasta","Burgers","Tacos"],
+    correct:1,
+    right:"PASTA FOREVER 🍝",
+    wrong:"THE PASTA PAGE IS RIGHT THERE 😭"
+  },
+  {
+    q:"Which country's flag is on the website?",
+    a:["France","America","Italy","Britain"],
+    correct:3,
+    right:"GOD SAVE THE KING 🇬🇧",
+    wrong:"THE FLAG IS LITERALLY THERE 😂"
+  },
+  {
+    q:"Where can you listen to the song?",
+    a:["YouTube","Netflix","Spotify","Disney+"],
+    correct:0,
+    right:"CORRECT! TIME FOR MUSIC 🎵",
+    wrong:"GO VISIT THE MUSIC PAGE!"
+  },
+  {
+    q:"How many little notes are there?",
+    a:["5","10","25","100"],
+    correct:2,
+    right:"25 LITTLE MESSAGES JUST FOR YOU 💗",
+    wrong:"THERE ARE 25! GO COUNT THEM 😂"
+  },
+  {
+    q:"What is the secret page called?",
+    a:["The End","Surprise","The Dungeon","Goodbye"],
+    correct:1,
+    right:"YOU FOUND THE SURPRISE! 🎁",
+    wrong:"GO LOOK AT THE TOP NAVIGATION!"
+  },
+  {
+    q:"What was used to make this website?",
+    a:["Pink pixels and effort","Magic","A potato","Nothing"],
+    correct:0,
+    right:"EXACTLY. A LOT OF PINK PIXELS. 💗",
+    wrong:"IT TOOK SOME ACTUAL EFFORT 😭"
+  }
+];
+
+let questionIndex = 0;
+let score = 0;
+let answered = false;
+
+function startQuiz() {
+  questionIndex = 0;
+  score = 0;
+  answered = false;
+
+  document.getElementById('quizStart').style.display = 'none';
+  document.getElementById('quizEnd').style.display = 'none';
+  document.getElementById('quizPlay').style.display = 'block';
+
+  loadQuestion();
+}
+
+function loadQuestion() {
+  answered = false;
+
+  const q = questions[questionIndex];
+
+  document.getElementById('questionNumber').innerText =
+    `Question ${questionIndex+1} / ${questions.length}`;
+
+  document.getElementById('progress').style.width =
+    (questionIndex/questions.length*100)+'%';
+
+  document.getElementById('question').innerText = q.q;
+
+  document.getElementById('feedback').innerText = '';
+
+  document.getElementById('nextButton').style.display = 'none';
+
+  const answers = document.getElementById('answers');
+  answers.innerHTML = '';
+
+  q.a.forEach((answer,index) => {
+    const button = document.createElement('button');
+    button.className = 'answer';
+    button.innerText = answer;
+
+    button.onclick = () => chooseAnswer(index,button);
+
+    answers.appendChild(button);
+  });
+}
+
+function chooseAnswer(index,button) {
+  if(answered) return;
+  answered = true;
+
+  const q = questions[questionIndex];
+  const all = document.querySelectorAll('.answer');
+
+  all.forEach((b,i) => {
+    b.disabled = true;
+    if(i===q.correct) b.classList.add('correct');
+  });
+
+  if(index===q.correct) {
+    score++;
+    document.getElementById('feedback').innerText = '💗 '+q.right;
+    hearts();
+  } else {
+    button.classList.add('wrong');
+    document.getElementById('feedback').innerText = '💔 '+q.wrong;
+  }
+
+  document.getElementById('progress').style.width =
+    ((questionIndex+1)/questions.length*100)+'%';
+
+  document.getElementById('nextButton').style.display = 'inline-block';
+
+  if(questionIndex===questions.length-1) {
+    document.getElementById('nextButton').innerText = 'See my score 🏆';
+  }
+}
+
+function nextQuestion() {
+  if(!answered) return;
+
+  questionIndex++;
+
+  if(questionIndex<questions.length) {
+    loadQuestion();
+  } else {
+    finishQuiz();
+  }
+}
+
+function finishQuiz() {
+  document.getElementById('quizPlay').style.display = 'none';
+  document.getElementById('quizEnd').style.display = 'block';
+
+  document.getElementById('resultScore').innerText =
+    score+' / '+questions.length;
+
+  let title,message;
+
+  if(score===8) {
+    title='PERFECT SCORE!!! 🏆';
+    message='YOU ACTUALLY KNOW EVERYTHING. LEGENDARY. 💗';
+  } else if(score>=6) {
+    title='AMAZING JOB! 💕';
+    message='You did really well! Almost a perfect score!';
+  } else if(score>=3) {
+    title='NOT BAD AT ALL! 🎀';
+    message='You know your way around this website!';
+  } else {
+    title='WE NEED A REMATCH 😭';
+    message='Maybe explore the website a little more!';
+  }
+
+  document.getElementById('resultTitle').innerText = title;
+  document.getElementById('resultMessage').innerText = message;
 
   hearts();
 }
@@ -784,60 +999,95 @@ function british() {
   document.getElementById('britishText').innerText =
     translations[britishIndex];
 
-  britishIndex = (britishIndex + 1) % translations.length;
+  britishIndex=(britishIndex+1)%translations.length;
 }
 
-// FLOATING HEARTS
+// SURPRISE
+
+function revealSecret() {
+  document.getElementById('secretMessage').innerHTML =
+    'SURPRISE!! 💗<br><br>' +
+    'You're pretty special, Ciara. I hope you never forget that. ' +
+    'And yes, I actually made an entire website for you. 😂💕';
+
+  hearts();
+  toast('SURPRISE UNLOCKED! 🎁');
+}
+
+// COMPLIMENT MACHINE
+
+const compliments = [
+  "You're genuinely lovely. 💗",
+  "You deserve all the good things.",
+  "You're more amazing than you realise.",
+  "I hope you're smiling right now.",
+  "You're a pretty cool person.",
+  "Never stop being yourself.",
+  "You're appreciated more than you know.",
+  "You make things a little brighter. 🌸"
+];
+
+function compliment() {
+  const random = Math.floor(Math.random()*compliments.length);
+
+  document.getElementById('compliment').innerText =
+    compliments[random];
+
+  sparkle();
+}
+
+// HEART EFFECT
 
 function hearts() {
   for(let i=0;i<25;i++) {
     setTimeout(() => {
-      const heart = document.createElement('div');
-      heart.className = 'floating-heart';
-      heart.innerText = ['💗','💕','💖','💘','🌸'][Math.floor(Math.random()*5)];
+      const h = document.createElement('div');
 
-      heart.style.left = Math.random()*100+'vw';
-      heart.style.fontSize = (15+Math.random()*25)+'px';
+      h.className='float';
+      h.innerText=['💗','💕','💖','💘','🌸'][Math.floor(Math.random()*5)];
+      h.style.left=Math.random()*100+'vw';
+      h.style.fontSize=(18+Math.random()*25)+'px';
 
-      document.body.appendChild(heart);
+      document.body.appendChild(h);
 
-      setTimeout(() => heart.remove(),5000);
-    },i*100);
+      setTimeout(()=>h.remove(),4100);
+    },i*65);
   }
 }
 
-// NOTIFICATION
+// SPARKLE EFFECT
+
+function sparkle() {
+  for(let i=0;i<9;i++) {
+    const s=document.createElement('div');
+
+    s.className='float';
+    s.innerText='✨';
+    s.style.left=Math.random()*100+'vw';
+    s.style.fontSize='20px';
+
+    document.body.appendChild(s);
+
+    setTimeout(()=>s.remove(),4100);
+  }
+}
+
+// TOAST MESSAGE
 
 let toastTimer;
 
 function toast(message) {
-  const element = document.getElementById('toast');
-  element.innerText = message;
-  element.classList.add('show');
+  const el=document.getElementById('toast');
+
+  el.innerText=message;
+  el.classList.add('show');
 
   clearTimeout(toastTimer);
 
-  toastTimer = setTimeout(() => {
-    element.classList.remove('show');
-  },2800);
+  toastTimer=setTimeout(()=>{
+    el.classList.remove('show');
+  },2500);
 }
-
-// LITTLE RANDOM HEARTS ON HOME
-
-setInterval(() => {
-  if(Math.random() > .65) {
-    const heart = document.createElement('div');
-    heart.className = 'floating-heart';
-    heart.innerText = '♡';
-    heart.style.left = Math.random()*100+'vw';
-    heart.style.color = '#ed72a5';
-    heart.style.fontSize = '22px';
-
-    document.body.appendChild(heart);
-
-    setTimeout(() => heart.remove(),5000);
-  }
-},1800);
 
 </script>
 
